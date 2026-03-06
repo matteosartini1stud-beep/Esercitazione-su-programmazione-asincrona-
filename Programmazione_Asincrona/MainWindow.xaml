@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="174,0,0,0" VerticalAlignment="Center" Height="82" Width="140" Click="btnStart_Click"/>
+        <Label x:Name="lblLabel" Content="ec" HorizontalAlignment="Left" Margin="174,51,0,0" VerticalAlignment="Top" Width="80"/>
+        <Button x:Name="btnEstrai" Content="Estrai" HorizontalAlignment="Left" Margin="475,0,0,0" VerticalAlignment="Center" Height="82" Width="140" Click="btnEstrai_Click"/>
+        <Label x:Name="lblParola" Content="Label" HorizontalAlignment="Left" Margin="526,64,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
