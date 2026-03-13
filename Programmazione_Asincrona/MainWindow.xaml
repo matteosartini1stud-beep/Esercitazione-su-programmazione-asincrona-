@@ -5,12 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Programmazione_Asincrona"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="#FFB5B5B5">
     <Grid>
-        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="174,0,0,0" VerticalAlignment="Center" Height="82" Width="140" Click="btnStart_Click"/>
-        <Label x:Name="lblLabel" Content="ec" HorizontalAlignment="Left" Margin="174,51,0,0" VerticalAlignment="Top" Width="80"/>
-        <Button x:Name="btnEstrai" Content="Estrai" HorizontalAlignment="Left" Margin="475,0,0,0" VerticalAlignment="Center" Height="82" Width="140" Click="btnEstrai_Click"/>
-        <Label x:Name="lblParola" Content="Label" HorizontalAlignment="Left" Margin="526,64,0,0" VerticalAlignment="Top"/>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+
+        <Button x:Name="btnStart" Content="Start per iniziare" HorizontalAlignment="Left" Margin="192,78,0,0" VerticalAlignment="Top" Height="63" Width="182" Click="btnStart_Click" FontWeight="bold" FontSize="16" Background="#FF2357D8" />
+        <Label x:Name="lblLabel" Content="A" HorizontalContentAlignment="center" HorizontalAlignment="Left" Margin="254,157,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="-1.2,1.362" Height="45" BorderThickness="2,2,2,2" BorderBrush="black" FontSize="14" Background="#FFEC72BA" FontWeight="Bold"></Label>
+        <Button x:Name="btnEstrai" Content="Estrai la lettera" HorizontalAlignment="Left" Margin="19,237,0,0" VerticalAlignment="Top" Height="65" Width="183" Click="btnEstrai_Click" FontWeight="bold"  Background="#FF2357D8" FontSize="16"/>
+        <Label x:Name="lblParola" Content="" HorizontalAlignment="Left" Margin="239,247,0,0" VerticalAlignment="Top" BorderThickness="2,2,2,2" BorderBrush="black" Width="118" FontSize="14"/>
+        <ListBox x:Name="lstBox"  Margin="537,1,0,0" SelectionChanged="lstBox_SelectionChanged">
+            <Label Content="Lista delle parole generate" Height="26" Width="250" FontFamily="Algerian" FontSize="15"/>
+        </ListBox>
+        <TextBlock HorizontalAlignment="Left" Margin="79,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="SORTEGGIO PAROLE CASUALI" FontSize="30" FontWeight="Black" />
+
 
     </Grid>
 </Window>

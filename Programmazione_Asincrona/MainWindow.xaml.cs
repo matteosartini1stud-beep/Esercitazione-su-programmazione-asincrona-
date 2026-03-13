@@ -27,30 +27,35 @@ namespace Programmazione_Asincrona
         string lettera = "";
         private async void btnEstrai_Click(object sender, RoutedEventArgs e)
         {
-            parola.Add(lettera);
-            lblParola.Content = parola;
-            await Task.Delay(100);
+            parola += lettera;
+
+            if (parola.Length == 6)
+            {
+                lstBox.Items.Add(parola);
+                parola="";
+                
+                
+            }
+            lblParola.Content= parola;
+            await Task.Delay(50);
         }
 
-        List<string> parola = new List<string>();
+        string parola = "";
         private async void btnStart_Click(object sender, RoutedEventArgs e)
         {
             while (true)
             {
-                if (i == 26)
-                {
-                    i = -1;
-                }
-                i++;
+                i = (i + 1) % alfabeto.Length;
                 lettera = alfabeto[i];
-                lblLabel.Content = lettera;
+                lblLabel.Content = lettera;  // Aggiorna la label dove è presente la lettera che gira 
                 await Task.Delay(100);
             }
-        }
+            }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void lstBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            lstBox.Items.Add(parola);
         }
+
     }
 }
