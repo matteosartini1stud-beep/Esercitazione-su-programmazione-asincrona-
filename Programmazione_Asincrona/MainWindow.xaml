@@ -19,6 +19,7 @@
             <Label Content="Lista delle parole generate" Height="26" Width="250" FontFamily="Algerian" FontSize="15"/>
         </ListBox>
         <TextBlock HorizontalAlignment="Left" Margin="79,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="SORTEGGIO PAROLE CASUALI" FontSize="30" FontWeight="Black" />
+        <Label Content="(MASSIMO 6 LETTERE)" HorizontalAlignment="Left" Margin="79,47,0,0" VerticalAlignment="Top"/>
 
 
     </Grid>
